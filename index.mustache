@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grades</title>
+    <style>
+        html {
+            font: 1.25em sans-serif;
+        }
+
+        table {
+            page-break-after: always;
+            margin: 5em;
+        }
+
+        tr {
+            height: 3em;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        td:first-child {
+            text-align: right;
+        }
+
+        td:last-child {
+            font-weight: bold;
+        }
+
+        p {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media print {
+            p {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Instructions: Print this document to PDF to use for Gradescope submissions. First, print to PDF <i>just the first page</i> to use as the <b>assignment outline</b>. Next, print the <i>second page up to the end of the document</i> to use for the <b>assignment submissions</b>.</p>
+    {{#grades}}
+    <table>
+        <tr><td>Name:</td><td>{{Name}}</td></tr>
+        <tr></tr>
+        <tr><td>Discussion Attendance:</td><td>{{D}}</td></tr>
+        <tr><td>Monday Lecture Attendance:</td><td>{{M}}</td></tr>
+        <tr><td>Wednesday Lecture Attendance:</td><td>{{W}}</td></tr>
+    </table>
+    {{/grades}}
+</body>
+</html>
