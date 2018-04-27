@@ -14,7 +14,7 @@ Quick Node.js server that reads attendance grades from a `grades.csv` file (must
 The recommended format of `grades.csv` is as follows:
 
 | Name | Discussion | Monday | Wednesday |
----
+|---|---|---|---|
 | Student1 | x | x | x |
 | Student2 |   | x | E |
 
